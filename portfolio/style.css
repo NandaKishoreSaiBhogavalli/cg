@@ -13,6 +13,9 @@ header {
   color: white;
   padding: 20px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 nav {
@@ -26,10 +29,11 @@ nav ul {
   margin: 0;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 10px;
 }
 
 nav ul li a {
@@ -39,6 +43,7 @@ nav ul li a {
   padding: 10px 15px;
   transition: color 0.3s ease-in-out, transform 0.2s ease-in-out;
   border-radius: 5px;
+  display: block;
 }
 
 nav ul li:nth-child(1) a { color: rgb(49, 47, 47); }
@@ -96,4 +101,20 @@ section#skills ul li {
 section#contact a {
   color: #007bff;
   text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    padding: 15px;
+  }
+  
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 5px 0;
+  }
 }
